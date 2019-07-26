@@ -1,8 +1,8 @@
-typedef uint8_t byte;
+typedef uint8_t uint8_t;
 
 class num2x2 {
 	struct digitMatrixes {
-		byte _matrix[8];
+		uint8_t _matrix[8];
 	};
 
 	digitMatrixes matrix[8] {
@@ -123,7 +123,7 @@ class num2x2 {
 		
 		void printMinus(uint8_t _posX, uint8_t _posY){
 			_lcd->setCursor(_posX, _posY+1);
-			_lcd->write((byte)4);
+			_lcd->write((uint8_t)4);
 		}
 		
 		void printDigit(uint8_t _posX, uint8_t _posY, uint8_t _dig2x2){
@@ -139,7 +139,7 @@ class num2x2 {
 					if(num2x2_def[_dig2x2][printCounter] == 9)
 						_lcd->print(" ");
 					else
-						_lcd->write((byte)num2x2_def[_dig2x2][printCounter]);
+						_lcd->write((uint8_t)num2x2_def[_dig2x2][printCounter]);
 					printCounter++;
 				}
 			}
@@ -174,24 +174,3 @@ class num2x2 {
 		}
 	
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
